@@ -15,7 +15,9 @@ Important files:
 Author
 ------
 [**Rafael Garibotti**](https://br.linkedin.com/in/rafaelgaribotti)
+
 [**Paulo Bassanesi**]
+
 [**Cezar Medaglia**]
 
 
