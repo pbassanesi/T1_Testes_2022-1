@@ -18,23 +18,23 @@ jobs:
           name: "Makefile"
           command: cd Unity/examples/T1 && make
       - run:
-          name: "Apt update"
+          name: "Sudo Update"
           command: sudo apt update 
       - run:
-          name: "Install cppcheck"
+          name: "Instalar cppcheck"
           command: sudo apt install cppcheck 
       - run:
-          name: "Install valgrind"
+          name: "Instalar valgrind"
           command: sudo apt install valgrind
       - run:
-          name: "Run cppcheck"
+          name: "Rodar cppcheck"
           command: cppcheck Unity/examples/T1/src/*.c
       - run:
-          name: "Run Sanitizer"
+          name: "Rodar Sanitizer"
           command: cd Unity/examples/T1 && make sanitizer
- #     - run:
- #         name: "Run Gcov"
- #         command: cd Unity/examples/T1 && sudo chmod a+x src && make gcov
+      - run:
+          name: "Run Gcov"
+          command: cd Unity/examples/T1 && sudo chmod a+x src && make gcov
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
