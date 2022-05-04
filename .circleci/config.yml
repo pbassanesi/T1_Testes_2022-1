@@ -27,9 +27,6 @@ jobs:
           name: "Install valgrind"
           command: sudo apt install valgrind
       - run:
-          name: "Install Sanitizer"
-          command: sudo apt-get install -y sanitizer
-      - run:
           name: "Run cppcheck"
           command: cppcheck Unity/examples/T1/src/*.c
 # Invoke jobs via workflows
