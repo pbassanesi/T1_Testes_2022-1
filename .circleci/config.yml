@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Makefile"
-          command: cd ../Unity/examples/T1 && make
+          command: cd Unity/examples/T1 && make
       - run:
           name: "Apt update"
           command: sudo apt update 
