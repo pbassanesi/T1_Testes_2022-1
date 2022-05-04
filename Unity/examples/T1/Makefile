@@ -62,8 +62,8 @@ DIRS=-Isrc -I$(..)/src -I$(..)/extras/fixture/src
 
 ##### General commands #####
 
-identifier: identifier.c
-	$(GCC) $(GCCFLAGS) -o $@ $@.c
+#identifier: identifier.c
+#	$(GCC) $(GCCFLAGS) -o $@ $@.c
 
 cov: identifier.c
 	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
