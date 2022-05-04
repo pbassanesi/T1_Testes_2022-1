@@ -35,7 +35,6 @@ TEST_TEAR_DOWN(T1)
 }
 //Key=4;input="ABCDzxcvb";type=0;enc_dec=0;output="ABCD";
  // All of these should pass
-}
 /*
 TEST(T1, TestT1_2)
 {
