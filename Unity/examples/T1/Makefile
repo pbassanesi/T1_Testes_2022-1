@@ -61,6 +61,8 @@ SRC_FILES=\
 DIRS=-Isrc -I../src -I../extras/fixture/src
 
 ##### General commands #####
+compile:
+	$(C_COMPILER) $(CFLAGS) $(DIRS) $(SRC_FILES) -o $(TARGET)
 
 #identifier: identifier.c
 #	$(GCC) $(GCCFLAGS) -o $@ $@.c
@@ -74,8 +76,6 @@ sanitizer:
 valgrind:
 	valgrind --leak-check=full --show-leak-kinds=all ./all_tests.out 
 	
-compile:
-	$(C_COMPILER) $(CFLAGS) $(DIRS) $(SRC_FILES) -o $(TARGET)
 gcov:
 	gcov -b aes.c
 	gcov -b camellia.c
