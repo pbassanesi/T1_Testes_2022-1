@@ -16,9 +16,9 @@ Author
 ------
 [**Rafael Garibotti**](https://br.linkedin.com/in/rafaelgaribotti)
 
-[**Paulo Bassanesi**]
+**Paulo Bassanesi**
 
-[**Cezar Medaglia**]
+**Cezar Medaglia**
 
 
 License
