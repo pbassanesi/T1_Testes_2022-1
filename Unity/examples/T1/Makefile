@@ -14,6 +14,19 @@ all: $(SRC_FILES) $(TEST_FILES)
 	$(CC) *.o -o app
 	rm -rf *.o
 
+identifier: identifier.c
+	$(GCC) $(GCCFLAGS) -o $@ $@.c
+
+cov: identifier.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
+
+clean:
+	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
+sanitizer:
+	$(C_COMPILER) -g -Wall -Wfatal-errors -fsanitize=address $(DIRS) $(SRC_FILES) -o $(TARGET)
+
+valgrind:
+	valgrind --leak-check=full --show-leak-kinds=all ./all_tests.out 
 #all: app
 
 #app: main.o aes.o camellia.o seed.o
