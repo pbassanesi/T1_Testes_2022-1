@@ -1,26 +1,23 @@
-#include "foo.h"
+#include "../src/crypt.h"
 #include "unity.h"
 #include "unity_fixture.h"
 
-TEST_GROUP(Foo);
+TEST_GROUP(T1);
 
-TEST_SETUP(Foo)
+TEST_SETUP(T1)
 {
 }
 
-TEST_TEAR_DOWN(Foo)
+TEST_TEAR_DOWN(T1)
 {
 }
 
-TEST(Foo, TestFoo1)
+TEST(T1, TestT1_A)
 {
   // All of these should pass
-  TEST_ASSERT_EQUAL(-2, foo(1,2));
-  TEST_ASSERT_EQUAL(-1, foo(2,2));
 }
 
-TEST(Foo, TestFoo2)
+TEST(T1, TestT1_B)
 {
   // This test will fail
-  TEST_ASSERT_EQUAL(2, foo(1,2));
 }
