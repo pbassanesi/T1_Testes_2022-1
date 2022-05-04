@@ -33,7 +33,7 @@ jobs:
           name: "Rodar Sanitizer"
           command: cd Unity/examples/T1 && make sanitizer
       - run:
-          name: "Run Gcov"
+          name: "Roda Gcov"
           command: cd Unity/examples/T1 && sudo chmod a+x src && make gcov
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
