@@ -49,8 +49,8 @@ CFLAGS += -ftest-coverage
 TARGET_BASE=tests
 TARGET = $(TARGET_BASE)$(TARGET_EXTENSION)
 SRC_FILES=\
-  $../../src/unity.c \
-  $../../extras/fixture/src/unity_fixture.c \
+  ../../src/unity.c \
+  ../../extras/fixture/src/unity_fixture.c \
   src/aes.c \
   src/camellia.c \
   src/crypt.c \
@@ -58,7 +58,7 @@ SRC_FILES=\
   test/main.c \
   test/test_runners/testrunner.c \
   test/test_runners/all_tests.c
-DIRS=-Isrc -I$(..)/src -I$(..)/extras/fixture/src
+DIRS=-Isrc -I../src -I../extras/fixture/src
 
 ##### General commands #####
 
