@@ -6,17 +6,17 @@ int32_t* key;
 uint32_t* input, output;
 uint8_t type, enc_dec;
 
-TEST_GROUP(Crypt);
+TEST_GROUP(T1);
 
-TEST_SETUP(Crypt)
+TEST_SETUP(T1)
 {
 }
 
-TEST_TEAR_DOWN(Crypt)
+TEST_TEAR_DOWN(T1)
 {
 }
 
-TEST(Crypt, TestT1_1)
+TEST(T1, TestT1_1)
 {
 //Key=4;input="ABCDzxcvb";type=0;enc_dec=0;output="ABCD";
     TEST_ASSERT_EQUAL(0, 0);//crypt(key, input, type, enc_dec, output));
