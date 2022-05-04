@@ -15,6 +15,12 @@ TEST_SETUP(T1)
 TEST_TEAR_DOWN(T1)
 {
 }
+TEST(T1, TestT1_1)
+{
+Key=4;input="DEFG09877";type=1;enc_dec=0;output="DEFG";
+    TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // This test will fail
+}
 TEST(T1, TestT1_2)
 {
 Key=4;input="DEFG09877";type=1;enc_dec=0;output="DEFG";
