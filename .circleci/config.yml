@@ -19,7 +19,7 @@ jobs:
           command: "make"
       - run:
           name: "Install Sanitizer"
-          command: sudo apt install sanitizer
+          command: sudo apt-get install sanitizer
       - run:
           name: "Apt update"
           command: sudo apt update 
