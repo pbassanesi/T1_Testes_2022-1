@@ -17,10 +17,28 @@ jobs:
       - run:
           name: "Makefile"
           command: "make"
-
+      - run:
+          name: "Apt update"
+          command: sudo apt update 
+      - run:
+          name: "Install cppcheck"
+          command: sudo apt install cppcheck 
+      - run:
+          name: "Install valgrind"
+          command: sudo apt install valgrind
+      - run:
+          name: "Run cppcheck"
+          command: cppcheck crypt/src/*.c
+      - run:
+          name: "Test Routine Make"
+          command: cd crypt && make
+      - run:
+          name: "Test Routine Make"
+          command: cd crypt && make
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   makefile-workflow:
     jobs:
       - makefile
+
