@@ -34,7 +34,7 @@ TEST_TEAR_DOWN(T1)
   TEST_ASSERT_EQUAL(0, result);
 }
 
-
+/*
     TEST(T1, TestT1_2)
 {
   unsigned int key[8] = {
