@@ -28,7 +28,7 @@ jobs:
           command: sudo apt install valgrind
       - run:
           name: "Run cppcheck"
-          command: cppcheck crypt/src/*.c
+          command: cppcheck Unity/examples/T1/src/*.c
       - run:
           name: "Test Routine Make"
           command: cd crypt && make
