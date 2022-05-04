@@ -15,7 +15,7 @@ TEST_SETUP(T1)
 TEST_TEAR_DOWN(T1)
 {
 }
-    TEST(T1, TestT1_1
+    TEST(T1, TestT1_1)
 {
   unsigned int key[8] = {
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'
