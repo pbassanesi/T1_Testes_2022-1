@@ -1,6 +1,6 @@
 #include "../src/crypt.h"
 #include "../../../src/unity.h"
-//#include "../../../extras/fixture/src/unity_fixture.h"
+#include "unity_fixture.h"
 
 int32_t* key;
 uint32_t* input, output;
@@ -204,6 +204,96 @@ Key=6;input="I@#%__";type=2;enc_dec=0;output="I@#%__";
 }TEST(T1, TestT1_33)
 {
   Key=8;input="ABCDDDEF";type=0;enc_dec=0;output="ABCDDDEF";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}TEST(T1, TestT1_34)
+{
+Key=8;input="DEFG!$%#";type=1;enc_dec=0;output="DEFG!$%#";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_35)
+{
+Key=8;input="I@#%__!#";type=2;enc_dec=0;output="I@#%__!#";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_36)
+{
+  Key=8;input="TEST1200";type=3;enc_dec=0;output="TEST1200";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_37)
+{
+  Key=8;input="XUXU";type=4;enc_dec=0;output="XUXU";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_38)
+{
+  Key=8;input="A1239000";type=5;enc_dec=0;output="A1239000";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_39)
+{
+Key=8;input="12345023";type=6;enc_dec=0;output="12345023";
 
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_40)
+{
+Key=8;input="*&#%$()!";type=-1;enc_dec=0;output="*&#%$()!";
+
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_41)
+{
+Key=8;input="ABCDDDEF";type=0;enc_dec=1;output="ABCDDDEF";
+
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_42)
+{
+Key=8;input="DEFG!$%#";type=1;enc_dec=1;output="DEFG!$%#";
+
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_43)
+{
+  Key=8;input="I@#%__!#";type=2;enc_dec=1;output="I@#%__!#";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_44)
+{
+  Key=8;input="TEST1200";type=3;enc_dec=1;output="TEST1200";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}TEST(T1, TestT1_45)
+{
+  Key=8;input="XUXU";type=4;enc_dec=1;output="XUXU";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}TEST(T1, TestT1_46)
+{
+  Key=8;input="A1239000";type=5;enc_dec=1;output="A1239000";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}TEST(T1, TestT1_47)
+{
+  Key=8;input="12345023";type=6;enc_dec=1;output="12345023";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
+  // All of these should pass
+}
+TEST(T1, TestT1_48)
+{
+  Key=8;input="*&#%$()!";type=-1;enc_dec=1;output="*&#%$()!";
+  TEST_ASSERT_EQUAL(0, crypt(key, input, type, enc_dec, output));
   // All of these should pass
 }
