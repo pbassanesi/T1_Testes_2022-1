@@ -64,11 +64,11 @@ DIRS=-Isrc -I../src -I../extras/fixture/src
 compile:
 	$(C_COMPILER) $(CFLAGS) $(DIRS) $(SRC_FILES) -o $(TARGET)
 
-#identifier: identifier.c
-#	$(GCC) $(GCCFLAGS) -o $@ $@.c
+identifier: identifier.c
+	$(GCC) $(GCCFLAGS) -o $@ $@.c
 
-#cov: identifier.c
-#	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
+cov: identifier.c
+	$(GCC) $(GCCFLAGS) -fprofile-arcs -ftest-coverage -o $@ identifier.c
 
 sanitizer:
 	$(C_COMPILER) -g -Wall -Wfatal-errors -fsanitize=address $(DIRS) $(SRC_FILES) -o $(TARGET)
