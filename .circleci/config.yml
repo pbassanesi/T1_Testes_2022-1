@@ -18,6 +18,9 @@ jobs:
           name: "Makefile"
           command: "make"
       - run:
+          name: "Install Sanitizer"
+          command: sudo apt install sanitizer
+      - run:
           name: "Apt update"
           command: sudo apt update 
       - run:
