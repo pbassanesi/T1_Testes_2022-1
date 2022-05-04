@@ -9,7 +9,7 @@
 #define UNITY_FIXTURE_H_
 
 #include "../../../src/unity.h"
-#include "unity_internals.h"
+#include "../../../src/unity_internals.h"
 #include "unity_fixture_malloc_overrides.h"
 #include "unity_fixture_internals.h"
 
