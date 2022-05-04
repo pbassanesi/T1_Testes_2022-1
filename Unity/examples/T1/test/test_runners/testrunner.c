@@ -1,9 +1,9 @@
 #include "unity.h"
 #include "unity_fixture.h"
 
-TEST_GROUP_RUNNER(Crypt)
+TEST_GROUP_RUNNER(T1)
 {
-  RUN_TEST_CASE(Crypt, TestT1_1);
+  RUN_TEST_CASE(T1, TestT1_1);
   printf("RUN_TEST_CASE=Case 1"); }
 /*  RUN_TEST_CASE(T1, TestT1_2);
   printf("RUN_TEST_CASE=Case 2");
