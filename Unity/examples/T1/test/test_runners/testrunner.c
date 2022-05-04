@@ -4,8 +4,8 @@
 TEST_GROUP_RUNNER(T1)
 {
   RUN_TEST_CASE(T1, TestT1_1);
-  printf("RUN_TEST_CASE=Case 1"); 
-  RUN_TEST_CASE(T1, TestT1_2);
+  printf("RUN_TEST_CASE=Case 1"); }
+/*  RUN_TEST_CASE(T1, TestT1_2);
   printf("RUN_TEST_CASE=Case 2"); 
   RUN_TEST_CASE(T1, TestT1_3);
   printf("RUN_TEST_CASE=Case 3");
@@ -43,7 +43,7 @@ TEST_GROUP_RUNNER(T1)
   printf("RUN_TEST_CASE=Case 19");
     RUN_TEST_CASE(T1, TestT1_20);
   printf("RUN_TEST_CASE=Case 20");}
-/*    RUN_TEST_CASE(T1, TestT1_21);
+    RUN_TEST_CASE(T1, TestT1_21);
   printf("RUN_TEST_CASE=Case 21");
     RUN_TEST_CASE(T1, TestT1_22);
   printf("RUN_TEST_CASE=Case 22");
