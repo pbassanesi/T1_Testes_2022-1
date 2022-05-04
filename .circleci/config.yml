@@ -31,10 +31,10 @@ jobs:
           command: cppcheck Unity/examples/T1/src/*.c
       - run:
           name: "Run Sanitizer"
-          command: cd ../Unity/examples/T1 && run
+          command: cd Unity/examples/T1 && run
       - run:
           name: "Run Gcov"
-          command: cd ../Unity/examples/T1 && sudo chmod a+x src && make gcov
+          command: cd Unity/examples/T1 && sudo chmod a+x src && make gcov
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
