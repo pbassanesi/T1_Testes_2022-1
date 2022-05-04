@@ -14,6 +14,17 @@ cov: identifier.c
 
 clean:
 	rm -fr $(ALL) *.o cov* *.dSYM *.gcda *.gcno *.gcov
+sanitizer:
+	$(C_COMPILER) -g -Wall -Wfatal-errors -fsanitize=address $(DIRS) $(SRC_FILES) -o $(TARGET)
 
+valgrind:
+	valgrind --leak-check=full --show-leak-kinds=all ./all_tests.out 
+
+gcov:
+	gcov aes.c
+	gcov camellia.c
+	gcov crypt.c
+	gcov seed.c
+	
 test: all
 	bash test
