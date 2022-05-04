@@ -15,12 +15,26 @@ TEST_SETUP(T1)
 TEST_TEAR_DOWN(T1)
 {
 }
-
-TEST(T1, TestT1_1)
+    TEST(T1, TestT1_1
 {
+  unsigned int key[8] = {
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'
+  };
+
+  unsigned int input[4] = {'a', 'b', 'c', 'd'};
+
+  int type = 3;
+
+  int enc_dec = 1;
+
+  unsigned int output[4];
+
+  int result = crypt(key, input, type, enc_dec, output);
+  printf("Resultado teste: %d", result);
+  TEST_ASSERT_EQUAL(0, result);
+}
 //Key=4;input="ABCDzxcvb";type=0;enc_dec=0;output="ABCD";
-    TEST_ASSERT_EQUAL(0, 0);//crypt(key, input, type, enc_dec, output));
-  // All of these should pass
+ // All of these should pass
 }
 /*
 TEST(T1, TestT1_2)
