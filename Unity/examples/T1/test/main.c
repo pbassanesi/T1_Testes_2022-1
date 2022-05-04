@@ -1,6 +1,6 @@
 #include "../src/crypt.h"
-#include "unity.h"
-#include "unity_fixture.h"
+#include "../../src/unity.h"
+#include "../../extras/fixture/src/unity_fixture.h"
 
 TEST_GROUP(T1);
 
